@@ -1,0 +1,14 @@
+body {
+  font-size: 2vw;
+}
+
+.verse {
+    line-height: 2.5em;
+}
+.chord {
+    display: inline-block;
+    width: 0px;
+    overflow: visible;
+    transform: translate(0, -1.1em);
+    font-weight: bold;
+}
