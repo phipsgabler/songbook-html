@@ -1,42 +1,89 @@
+:root {
+    
+}
+
 body {
-  font-size: 2vw;
+    font-size: 2vw;
+    font-family: monospace;
+}
+
+.song {
+    /*     font-family: serif; */
 }
 
 .songtitle {
+    font-size: x-large;
+}
 
+.author {
+    font-size: medium;
 }
 
 .verse {
-    line-height: 2.5rem;
-    font-size: 0;
+    line-height: 3rem;
+    /*     font-family: serif; */
 }
-.chord {
-    display: inline flow-root;
+
+.cbox {
+    border: 1px solid;
+    display: inline-block;
+}
+
+.cbox::before {
+    content: attr(data-c);
     width: 0px;
-    overflow: visible;
+    display: inline-block;
     transform: translate(0, -1.1rem);
     font-weight: bold;
     font-family: monospace;
 }
 
-.box {
-    display: inline flow-root;
-    font-size: 2vw;
-    white-space: pre;
-    border: 1px solid;
-}
-
-.box[data-w="1"] {
-    min-width: 1rem;
+.cbox[data-w="1"] {
+    min-width: 1ex;
     background-color: pink;
 }
 
-.box[data-w="2"] {
-    min-width: 2rem;
+.cbox[data-w="2"] {
+    min-width: 2ex;
     background-color: lightgreen;
 }
 
-.box[data-w="3"] {
-    min-width: 3rem;
+.cbox[data-w="3"] {
+    min-width: 3ex;
     background-color: lightblue;
+}
+
+.cbox[data-w="4"] {
+    min-width: 4ex;
+    background-color: yellow;
+}
+
+.cbox[data-w="5"] {
+    min-width: 5ex;
+    background-color: gray;
+}
+
+.cbox[data-w="6"] {
+    min-width: 6ex;
+    background-color: orange;
+}
+
+.cbox[data-w="7"] {
+    min-width: 7ex;
+    background-color: blue;
+}
+
+.cbox[data-w="8"] {
+    min-width: 8ex;
+    background-color: red;
+}
+
+.cbox[data-w="9"] {
+    min-width: 9ex;
+    background-color: green;
+}
+
+.cbox[data-w="10"] {
+    min-width: 10ex;
+    background-color: purple;
 }
