@@ -3,87 +3,126 @@
 }
 
 body {
-    font-size: 2vw;
-    font-family: monospace;
+    font-size: 18pt;
+    font-family: serif;
 }
 
 .song {
-    /*     font-family: serif; */
 }
 
-.songtitle {
-    font-size: x-large;
+span[itemprop="title"] {
+    /*     font-size: x-large; */
 }
 
-.author {
-    font-size: medium;
+span[itemprop="author"] {
+    /*     font-size: large; */
 }
 
 .verse {
     line-height: 3rem;
-    /*     font-family: serif; */
+    font-family: serif;
+    line-height: 2.5;
 }
 
-.cbox {
+.lyric {
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: [top] 1em [middle] 1em [base];
+    grid-row: middle / base;
+    line-height: 1;
+    /*     align-items: baseline; */
+    vertical-align: text-bottom;
     border: 1px solid;
-    display: inline-block;
+    translate: 0 0em;
 }
 
-.cbox::before {
-    content: attr(data-c);
-    width: 0px;
-    display: inline-block;
-    transform: translate(0, -1.1rem);
+.lyric[data-chord] {
+  --chord: attr(data-chord);
+}
+
+.lyric:before {
+    content: var(--chord, '\00a0');
+    grid-row: top / middle;
+    align-self: end;
     font-weight: bold;
-    font-family: monospace;
+    user-select: none;
+    border-bottom: 1px solid;
 }
 
-.cbox[data-w="1"] {
-    min-width: 1ex;
-    background-color: pink;
-}
+/* .verse {
+   line-height: 3rem;
+   font-family: serif;
+   }
 
-.cbox[data-w="2"] {
-    min-width: 2ex;
-    background-color: lightgreen;
-}
+   .cbox {
+   border: 1px solid;
+   display: inline-block;
+   }
 
-.cbox[data-w="3"] {
-    min-width: 3ex;
-    background-color: lightblue;
-}
+   .chord {
+   display: inline-block;
+   position: absolute;
+   transform: translate(0, -1.1rem);
+   font-weight: bold;
+   font-family: monospace;
+   user-select: none;
+   } */
 
-.cbox[data-w="4"] {
-    min-width: 4ex;
-    background-color: yellow;
-}
+/* .cbox::before {
+   content: attr(data-c);
+   width: 0px;
+   display: inline-block;
+   transform: translate(0, -1.1rem);
+   font-weight: bold;
+   font-family: monospace;
+   } */
 
-.cbox[data-w="5"] {
-    min-width: 5ex;
-    background-color: gray;
-}
+/* .cbox[data-w="1"] {
+   min-width: 1ex;
+   background-color: pink;
+   }
 
-.cbox[data-w="6"] {
-    min-width: 6ex;
-    background-color: orange;
-}
+   .cbox[data-w="2"] {
+   min-width: 2ex;
+   background-color: lightgreen;
+   }
 
-.cbox[data-w="7"] {
-    min-width: 7ex;
-    background-color: blue;
-}
+   .cbox[data-w="3"] {
+   min-width: 3ex;
+   background-color: lightblue;
+   }
 
-.cbox[data-w="8"] {
-    min-width: 8ex;
-    background-color: red;
-}
+   .cbox[data-w="4"] {
+   min-width: 4ex;
+   background-color: yellow;
+   }
 
-.cbox[data-w="9"] {
-    min-width: 9ex;
-    background-color: green;
-}
+   .cbox[data-w="5"] {
+   min-width: 5ex;
+   background-color: gray;
+   }
 
-.cbox[data-w="10"] {
-    min-width: 10ex;
-    background-color: purple;
-}
+   .cbox[data-w="6"] {
+   min-width: 6ex;
+   background-color: orange;
+   }
+
+   .cbox[data-w="7"] {
+   min-width: 7ex;
+   background-color: blue;
+   }
+
+   .cbox[data-w="8"] {
+   min-width: 8ex;
+   background-color: red;
+   }
+
+   .cbox[data-w="9"] {
+   min-width: 9ex;
+   background-color: green;
+   }
+
+   .cbox[data-w="10"] {
+   min-width: 10ex;
+   background-color: purple;
+   } */
